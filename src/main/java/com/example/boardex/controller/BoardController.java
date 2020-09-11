@@ -2,9 +2,11 @@ package com.example.boardex.controller;
 
 import lombok.extern.java.Log;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import sun.misc.Request;
 
 @Log
 @Controller
@@ -60,8 +62,6 @@ public class BoardController {
         return "board/read";
     }
 
-     */
-
     //Http 메서드 매핑
     @RequestMapping(value = "/register", method = RequestMethod.GET)
     public String registerForm() {
@@ -104,4 +104,55 @@ public class BoardController {
         return "formHome";
     }
 
+     */
+
+
+    @RequestMapping(value = "/get", method = RequestMethod.GET, params = "register")
+    public String registerForm() {
+        log.info("registerForm");
+
+        return "board/register";
+    }
+
+    @RequestMapping(value = "/post", method = RequestMethod.POST, params = "register")
+    public String register(){
+        log.info("register");
+
+        return "board/list";
+    }
+
+    @RequestMapping(value = "/get", method = RequestMethod.GET, params = "modify")
+    public String modifyForm(){
+        log.info("modifyForm");
+
+        return "board/modify";
+    }
+
+    @RequestMapping(value = "/post", method = RequestMethod.POST, params = "modify")
+    public String modify(){
+        log.info("modify");
+
+        return "board/list";
+    }
+
+    @RequestMapping(value = "/get", method = RequestMethod.GET, params = "remove")
+    public String removeForm(){
+        log.info("removeForm");
+
+        return "board/remove";
+    }
+
+    @RequestMapping(value = "/post", method = RequestMethod.POST, params = "remove")
+    public String remove(){
+        log.info("remove");
+
+        return "board/list";
+    }
+
+    @RequestMapping(value = "/get", method = RequestMethod.GET, params = "read")
+    public String read(){
+        log.info("read");
+
+        return "board/read";
+    }
 }

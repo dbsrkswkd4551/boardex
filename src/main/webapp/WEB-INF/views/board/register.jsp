@@ -11,6 +11,12 @@
     <title>BOARD</title>
 </head>
 <body>
+
     <h3>REGISTER</h3>
+    <form method="post" action="/board/post">
+        <button type="submit" name="register">Register</button>
+    </form>
+
+    <a href="/boadrd/get/list">LIST</a>
 </body>
 </html>
