@@ -5,8 +5,7 @@ import org.springframework.beans.factory.annotation.Required;
 
 import java.sql.Date;
 
-@Getter
-@Setter
+@ToString
 public class Board{
 
     private int boardNo;
