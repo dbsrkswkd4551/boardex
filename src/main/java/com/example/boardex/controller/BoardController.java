@@ -4,6 +4,7 @@ import lombok.extern.java.Log;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 @Log
 @Controller
@@ -26,8 +27,9 @@ public class BoardController {
     public void list() {
         log.info("list");
     }
-     */
 
+
+    //경로패턴 매핑
     @RequestMapping("/register")
     public void registerForm() {
         log.info("registerForm");
@@ -58,6 +60,48 @@ public class BoardController {
         return "board/read";
     }
 
+     */
 
+    //Http 메서드 매핑
+    @RequestMapping(value = "/register", method = RequestMethod.GET)
+    public String registerForm() {
+        log.info("registerForm");
+
+        return "success";
+    }
+
+    @RequestMapping(value = "/register", method = RequestMethod.POST)
+    public String register() {
+        log.info("register");
+
+        return "success";
+    }
+
+    @RequestMapping(value = "/modify", method = RequestMethod.GET)
+    public String modifyForm() {
+        log.info("modifyForm");
+
+        return "success";
+    }
+
+    @RequestMapping(value = "/modify", method = RequestMethod.POST)
+    public String modify() {
+        log.info("register");
+
+        return "success";
+    }
+
+    @RequestMapping(value = "/list", method = RequestMethod.GET)
+    public String list() {
+        log.info("list");
+
+        return "success";
+    }
+
+    @RequestMapping(value = "/formHome", method = RequestMethod.POST)
+    public String formHome() {
+
+        return "formHome";
+    }
 
 }

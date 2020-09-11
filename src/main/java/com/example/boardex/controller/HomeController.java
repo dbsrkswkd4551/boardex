@@ -29,4 +29,9 @@ public class HomeController {
 
         return "home";
     }
+
+    @RequestMapping(value= "/formHome", method = RequestMethod.GET)
+    public String formHome(){
+        return "formHome";
+    }
 }
