@@ -5,12 +5,11 @@ import org.springframework.beans.factory.annotation.Required;
 
 import java.sql.Date;
 
-@NoArgsConstructor
-@RequiredArgsConstructor
+@Getter
+@Setter
 public class Board{
 
     private int boardNo;
-    @NonNull
     private String title;
     private String content;
     private String writer;
