@@ -5,9 +5,9 @@ import org.springframework.beans.factory.annotation.Required;
 
 import java.sql.Date;
 
-@Getter
-@Setter
-@EqualsAndHashCode(of = "boardNo")
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
 public class Board{
 
     private int boardNo;
